@@ -15,16 +15,16 @@ sudo chmod 777 -R SCRIPTS/
 if [[ "$ACTION" = "1" ]]
 then
 	WAY="$(date +"%d-%m-%Y-%T") $@"
-	mkdir $HOME"/DB_manager/DB/"$WAY
+	mkdir $HOME"/DB_manager-main/DB/"$WAY
 	cd "/var/bases/prg3/"
 	
 	echo "Выполняется копирование файлов BASE.FDB BIN.FDB BLOB.FDB"
 	echo "ОЖИДАЙТЕ..."
 	sudo cp BASE.FDB BIN.FDB BLOB.FDB $HOME"/DB_manager/DB/"$WAY
 	sudo chmod 777 BASE.FDB BIN.FDB BLOB.FDB
-	echo "Файлы BASE.FDB BIN.FDB BLOB.FDB скопированы в каталог "$HOME"/DB_manager/DB/"$WAY
+	echo "Файлы BASE.FDB BIN.FDB BLOB.FDB скопированы в каталог "$HOME"/DB_manager-main/DB/"$WAY
 	
-	cd $HOME"/DB_manager/SCRIPTS"
+	cd $HOME"/DB_manager-main/SCRIPTS"
 	cp backup.sh "../DB/"$WAY
 	cp restore.sh "../DB/"$WAY
 	cd "../DB/"$WAY
@@ -32,11 +32,11 @@ then
 	echo "Идёт архивация файлов BASE.FDB BIN.FDB BLOB.FDB"
 	echo "ОЖИДАЙТЕ..."
 	sudo ./backup.sh /var/bases/prg3/BASE.FDB
-	echo "В каталоге "$HOME"/DB_manager/DB/"$WAY
+	echo "В каталоге "$HOME"/DB_manager-main/DB/"$WAY
 	sudo ./backup.sh /var/bases/prg3/BIN.FDB
-	echo "В каталоге "$HOME"/DB_manager/DB/"$WAY
+	echo "В каталоге "$HOME"/DB_manager-main/DB/"$WAY
 	sudo ./backup.sh /var/bases/prg3/BLOB.FDB
-	echo "В каталоге "$HOME"/DB_manager/DB/"$WAY
+	echo "В каталоге "$HOME"/DB_manager-main/DB/"$WAY
 	rm backup.err backup.log
     
 	echo "Для завершения работы нажмите ENTER..."

@@ -37,7 +37,7 @@ then
 	echo "В каталоге "$HOME"/DB_manager-main/DB/"$WAY
 	sudo ./backup.sh /var/bases/prg3/BLOB.FDB
 	echo "В каталоге "$HOME"/DB_manager-main/DB/"$WAY
-	rm backup.err backup.log
+	sudo rm backup.err backup.log
     
 	echo "Для завершения работы нажмите ENTER..."
 	read

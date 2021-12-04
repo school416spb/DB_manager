@@ -20,7 +20,7 @@ then
 	
 	echo "Выполняется копирование файлов BASE.FDB BIN.FDB BLOB.FDB"
 	echo "ОЖИДАЙТЕ..."
-	sudo cp BASE.FDB BIN.FDB BLOB.FDB $HOME"/DB_manager/DB/"$WAY
+	sudo cp BASE.FDB BIN.FDB BLOB.FDB $HOME"/DB_manager-main/DB/"$WAY
 	sudo chmod 777 BASE.FDB BIN.FDB BLOB.FDB
 	echo "Файлы BASE.FDB BIN.FDB BLOB.FDB скопированы в каталог "$HOME"/DB_manager-main/DB/"$WAY
 	

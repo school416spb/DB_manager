@@ -10,6 +10,8 @@ echo "3 - ВЫХОД"
 
 read ACTION
 
+sudo chmod 777 -R SCRIPTS/
+
 if [[ "$ACTION" = "1" ]]
 then
 	WAY="$(date +"%d-%m-%Y-%T") $@"
